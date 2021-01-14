@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:test_flutter/review_list.dart';
 import 'description_place.dart';
 
 void main() {
@@ -19,7 +21,11 @@ class MyApp extends StatelessWidget {
         ),
         home: Scaffold(
             appBar: AppBar(title: Text("Hello world")),
-            body: new DescriptionPlace("Bahamas", 4, descriptionDummy))
+            body: SingleChildScrollView (
+                scrollDirection: Axis.vertical,
+                child: new DescriptionPlace("Bahamas", 4, descriptionDummy)
+            )
+        )
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:test_flutter/review_list.dart';
 
 class DescriptionPlace extends StatelessWidget {
 
@@ -69,7 +70,11 @@ class DescriptionPlace extends StatelessWidget {
       ],
     );
     return Column(
-      children: [titleStars, description],
+      children: [
+        titleStars,
+        description,
+        new ReviewList()
+      ],
     );
   }
 }
